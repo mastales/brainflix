@@ -1,14 +1,15 @@
-import logo from './ignore/BrainFlix-logo.svg';
 import './App.css';
+import HeaderNav from './components/HeaderNav';
+import VideoSection from './components/VideoSection';
+import NextVideos from './components/NextVideos';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo}  />
-        
-      </header>
-    </div>
+    <>
+      <HeaderNav />
+      <VideoSection />
+      <NextVideos />
+    </>
   );
 }
 
