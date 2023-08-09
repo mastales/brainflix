@@ -1,0 +1,36 @@
+.commentNew {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid orange;
+
+    &__title {
+        font-size: 1rem; //16px
+        color: #AFAFAF;
+        text-transform: uppercase;
+        margin: 0;
+        border: 1px solid orange;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid orange;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid orange;
+    }
+
+    &__input {
+        height: 100px;
+        margin: 1rem;
+    }
+
+    &__img {
+        height: 2.5rem;
+        margin: 1rem 0 0 0;
+        border-radius: 50%;
+    }
+}
