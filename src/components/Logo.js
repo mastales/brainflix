@@ -5,8 +5,8 @@ import logo from '../misc/BrainFlix-logo.svg';
 
 function Logo() {
   return (
-    <div className="App">
-      <header className="App-logo">
+    <div className="Header">
+      <header className="Header__logo">
         <img src={logo}  /> 
       </header>
     </div>

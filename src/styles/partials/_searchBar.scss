@@ -1,8 +1,32 @@
-.searchbar {
+.searchBar {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+   //box model
+    margin: 10px;
+    
+    
+  
+    &__input {
+      height: 2.5rem; //40px
+      width: 65vw;
+      margin:0;
+      padding-left: 1.75rem; //28px
+    }
+
+    &__left {
+      top: 10px;
+    }
+
+    &__img {
+      size: 1.25rem; //20px;
+      align-items: absolute;
+      left: 20px;
+      top: 13px
+    }
+
+    
   }
+
 
   

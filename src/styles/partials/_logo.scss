@@ -1,9 +1,12 @@
-.App {
-    text-align: center;
+.Header {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
   }
   
-  .App-logo {
+  .Header__logo {
     height: 1.56rem; /*25px*/
     width: 7.5rem; /*120px*/
-    align-items: center;
+    display: flex;
+    
   }

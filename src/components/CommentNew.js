@@ -1,4 +1,6 @@
 import React from "react";
+import comment from '../components/images/add_comment.svg'; 
+import Button from "./UploadButton";
 
 function CommentNew() {
     return (
@@ -8,9 +10,9 @@ function CommentNew() {
                     <img className="" src=''/>
                 </div>
             <div className="">
-                <textarea className="" placeholder="Add New Comment"></textarea>
+                <input className="" placeholder="Add New Comment"></input>
                 <div className="">
-                    <button className="">Comment</button>
+                <Button name='Comment' img={comment}/>
                 </div>
             </div>
         </div>

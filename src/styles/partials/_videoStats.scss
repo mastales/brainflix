@@ -1,0 +1,17 @@
+.videoStats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &__left {
+        border: 2px solid black;
+    }
+
+    &__right {
+        border: 2px solid black;
+    }
+}
+
+hr {
+    color: red;
+}

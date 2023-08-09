@@ -1,13 +1,14 @@
 import Logo from './Logo';
 import SearchBar from './SearchBar';
-import UploadButton from './UploadButton';
+import Button from './UploadButton';
+import upload from '../components/images/upload.svg';
 
 function HeaderNav() {
   return (
     <>
       <Logo />
       <SearchBar />
-      <UploadButton />
+      <Button name='Upload' img={upload}/>
     </>
   );
 }
