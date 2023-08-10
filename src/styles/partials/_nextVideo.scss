@@ -1,0 +1,30 @@
+.nextUp {
+    display: flex;
+
+    &__title{ 
+        font-size: 1rem; //16px
+        color: #AFAFAF;
+        text-transform: uppercase;
+        margin-left: 1rem; //16px
+    }
+
+    &__img { 
+        width: 35vw;
+    }
+
+    &__left {
+        margin: 1rem; //16px
+        border: 1px solid blue;
+    }
+
+    &__right {
+        margin-top: 1rem; //16px
+        width: 53vw;
+        border: 1px solid blue;
+    }
+
+    h2 {
+        margin: 0;
+    }
+}
+

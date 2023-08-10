@@ -2,6 +2,7 @@ import React from "react";
 import './Component/Component.scss';
 import search from '../components/images/search.svg';
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/input"
+import icon from '../components/images/Mohan-muruge.jpg';
 
 
 function SearchBar() {
@@ -21,3 +22,6 @@ function SearchBar() {
 
 
 export default SearchBar
+
+//remove Chakra and attempt to style with regular JSX
+//use 'icon' import to have the image appear to the right of the search bar 
