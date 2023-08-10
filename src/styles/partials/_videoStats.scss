@@ -4,11 +4,20 @@
     justify-content: space-around;
 
     &__left {
-        
+        h3 {
+            font-family: AvenirNextLTPro-Bold; 
+        }
+
+        h4 {
+            color: #AFAFAF;
+            font-family: AvenirNextLTPro;
+        } 
     }
 
     &__right {
-        
+        p{ 
+            color: #AFAFAF;
+        }
     }
 }
 

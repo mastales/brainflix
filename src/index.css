@@ -7,7 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: local("AvenirNextLTPro"),
+    url("./fonts/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro-Bold";
+  src: local("AvenirNextLTPro-Bold"),
+    url("./fonts/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: bold;
 }

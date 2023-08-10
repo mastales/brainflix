@@ -10,8 +10,8 @@ function VideoStats() {
             <Divider />
             <div className="videoStats">
                 <div className="videoStats__left">
-                    <h3>Author</h3>
-                    <h3>Date</h3>
+                    <h3>By First Last</h3>
+                    <h4>Date</h4>
                 </div>
                 <div className="videoStats__right">
                     <p><img src={views} /> Views</p>
