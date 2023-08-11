@@ -1,6 +1,8 @@
 .comments {
     display: flex;
     flex-direction: row;
+    font-family: AvenirNext;
+
 
     &__left {
         display: flex;
@@ -16,11 +18,16 @@
 
     &__middle {
         display: flex;
-        width: 78vw;
+        width: 75vw;
         justify-content: space-between;
         align-items: center;
         margin: 1rem 0 0 0; //16px
-        border: 1px solid orange
+        
+    }
+
+    &__bottom {
+        width: 75vw;
+        line-height: 1.5rem; //24px
     }
 
     &__userImg {
@@ -31,9 +38,12 @@
 
     &__name {
         margin: 0;
+        font-family: AvenirNext-Bold;
     }
 
     &__date {
         margin: 0;
+        color: #AFAFAF;
     }
+
 }

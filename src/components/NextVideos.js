@@ -11,8 +11,8 @@ function NextVideos(){
                     <img className="nextUp__img" src={userImg}/>
                 </div>
                 <div className="nextUp__right">
-                    <h2>Video Title</h2>
-                    <h3>Author Name</h3>
+                    <h4 className="nextUp__name" >Video Title</h4>
+                    <p className="nextUp__author">Author Name</p>
                 </div>
             </div>
         </div>

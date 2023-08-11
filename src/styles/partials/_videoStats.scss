@@ -1,23 +1,33 @@
 .videoStats {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
+    margin-left: 1rem;
 
     &__left {
+        margin-right: 4rem;
+
         h3 {
-            font-family: AvenirNextLTPro-Bold; 
+            font-family: AvenirNext; 
+            margin: 0 0 1rem 0;
         }
 
         h4 {
             color: #AFAFAF;
-            font-family: AvenirNextLTPro;
+            font-family: AvenirNext;
+            margin: 0;
         } 
     }
 
-    &__right {
-        p{ 
-            color: #AFAFAF;
-        }
+
+    &__views {
+        margin: 0 0 1rem 0;
+        color: #AFAFAF;
+    }
+
+    &__likes {
+        margin: 0;
+        color: #AFAFAF;
     }
 }
 

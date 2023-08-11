@@ -6,7 +6,6 @@ import Comments from "./Comments";
 function CommentSection () {
     return (
         <>
-            <CommentCount />
             <CommentNew />
             <Comments />
         </>

@@ -7,18 +7,18 @@ import icon from '../components/images/Mohan-muruge.jpg';
 
 function SearchBar() {
     return (
-        <InputGroup className='searchBar'>
-            <InputLeftElement 
-            top='13px'
-            marginLeft='5px'
-            className='searchBar__left' 
-            pointerEvents='none'>
+        <div className='searchBar'>
+            <div className='searchBar__left'>
                 <img classname='searchBar__img' src={search} />
-            </InputLeftElement>
-            <Input className='searchBar__input' type='text' placeholder='Search' />
-        </InputGroup>
+            </div>
+            <div className="searchBar__right">
+                <input className='searchBar__input' type='text' placeholder='Search' />
+                <img className="searchBar__profileImg" src={icon}/>
+            </div>
+        </div>
     )
 }
+
 
 
 export default SearchBar

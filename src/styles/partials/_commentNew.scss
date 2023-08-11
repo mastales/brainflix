@@ -1,10 +1,11 @@
 .commentNew {
     display: flex;
     flex-direction: row;
-    border: 1px solid orange;
+    margin: 0 1rem 0 1rem;
 
     &__title {
-        font-size: 1rem; //16px
+        font-family: AvenirNext-Bold;
+        font-size: 0.875rem; //14px
         color: #AFAFAF;
         text-transform: uppercase;
         margin-left: 1rem; //16px
@@ -22,18 +23,35 @@
 
     &__input {
         height: 100px;
-        width: 75vw;
-        margin: 1rem;
+        width: 68vw;
+        margin: 0 0 1rem 1rem;
+        background-color: #FAFAFA;
+        border: 1px solid #E1E1E1;
+        border-radius: 4px;
+        padding: 1rem 0 0 1rem; //16px
+        font-family: AvenirNext;
+        font-size: 14px;
     }
 
     &__img {
         height: 2.5rem;
-        margin: 1rem 0 0 0;
+        margin: 2rem 0 0 0;
         border-radius: 50%;
     }
 
     &__button {
-        width: 82vw;
+        width: 78vw;
         margin-left: 0.5rem; //8px
+    }
+    
+    //Counter
+    &__count {
+        display: flex;
+        margin-left: 1rem; //16px
+        font-family: AvenirNext-Bold;
+
+        h4 {
+            margin: 0.5rem 0 1rem 0;
+        }
     }
 }

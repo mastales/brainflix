@@ -1,5 +1,6 @@
 .nextUp {
     display: flex;
+    font-family: AvenirNext;
 
     &__title{ 
         font-size: 1rem; //16px
@@ -13,14 +14,26 @@
     }
 
     &__left {
+        display: flex;
         margin: 1rem; //16px
         border: 1px solid blue;
     }
 
     &__right {
+        display: flex;
+        flex-direction: column;
         margin-top: 1rem; //16px
         width: 53vw;
         border: 1px solid blue;
+    }
+
+    &__name {
+        font-family: AvenirNext-Bold;
+        margin: 0 0 0.5rem 0; //8px
+    }
+
+    &__author {
+        margin: 0;
     }
 
     h2 {
