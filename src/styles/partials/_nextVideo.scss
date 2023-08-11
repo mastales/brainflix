@@ -1,6 +1,7 @@
 .nextUp {
     display: flex;
     font-family: AvenirNext;
+    align-items: center;
 
     &__title{ 
         font-size: 1rem; //16px
@@ -10,13 +11,16 @@
     }
 
     &__img { 
-        width: 35vw;
+        display: flex;
+        height: 20vw;
+        width: 30vw;
+        border-radius: 4px;
+        justify-content: center;
     }
 
     &__left {
         display: flex;
-        margin: 1rem; //16px
-        border: 1px solid blue;
+        margin: 1rem 1rem 0 1rem; //16px
     }
 
     &__right {
@@ -24,7 +28,6 @@
         flex-direction: column;
         margin-top: 1rem; //16px
         width: 53vw;
-        border: 1px solid blue;
     }
 
     &__name {
