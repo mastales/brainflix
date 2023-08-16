@@ -8,17 +8,15 @@ const uploadVideo = () => {
 }   
 
     return (
-        <div className='Button'>
+        <>
             <button className='Button__upload' onClick={uploadVideo}>
                 <div className="Button__img">
-                    <img 
-                    src={props.img} alt="Upload Icon" /> 
+                    <img src={props.img} alt="Upload Icon" /> 
                 </div>
-                <div className="Button__text">
-                {props.name}
+                <div className="Button__text">{props.name}
                 </div>
             </button>
-        </div>
+        </>
     )
 };
 export default Button;

@@ -1,3 +1,15 @@
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1279px) {
+        @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 1280px) and (max-width: 5000px) {
+        @content;
+    }
+  }
+
 .videoStats {
     display: flex;
     flex-direction: row;
@@ -31,6 +43,26 @@
     }
 }
 
-hr {
-    color: red;
+.videoStats {
+    @include tablet() {
+        justify-content: space-between;
+        margin: 0 2.5rem 0 2.5rem;
+
+        &__left {
+            display: flex;
+            align-items: flex-start;
+            h3 {
+                margin: 0 2rem 0 0;
+            }
+        }
+    
+        &__right {
+            display: flex;
+        }
+
+        &__views { 
+            margin: 0 2rem 0 0;
+        }
+    
+    }
 }

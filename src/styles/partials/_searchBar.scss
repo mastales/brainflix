@@ -1,3 +1,16 @@
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1279px) {
+      @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) and (max-width: 5000px) {
+      @content;
+  }
+}
+
+
 .searchBar {
     display: flex;
     flex-direction: column;
@@ -44,5 +57,18 @@
       margin: 0;
       border-radius: 50%;
     }
+
+    &__upload {
+      display: none;
+    }
     
+  }
+
+  .searchBar { 
+
+    &__input { 
+      @include tablet () {
+        width: 25vw;
+        }
+    }
   }

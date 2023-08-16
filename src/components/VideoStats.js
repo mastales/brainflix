@@ -6,12 +6,9 @@ import './Component/Component.scss';
 import Divider from "./Divider";
 import data from '../data/video-details.json'
 
-function VideoStats() {
-    const [videoId, setVideoId] = useState(
-        "84e96018-4022-434e-80bf-000ce4cd12b8"
-    );
+function VideoStats({ videoId }) {
     
-    const videoData = data.filter((currentItem, currentItemIndex) => {
+    const videoData = data.filter((currentItem) => {
         return currentItem.id === videoId ? true : false;
     })
     

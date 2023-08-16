@@ -5,11 +5,13 @@ import upload from '../components/images/upload.svg';
 
 function HeaderNav() {
   return (
-    <>
+    <div className='Header__Nav'>
       <Logo />
       <SearchBar />
-      <Button name='Upload' img={upload}/>
-    </>
+      <div className="Button">
+        <Button  name='Upload' img={upload}/>
+      </div>
+    </div>
   );
 }
 

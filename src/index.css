@@ -18,5 +18,5 @@ body {
   font-family: "AvenirNext-Bold";
   src: local("AvenirNextLTPro-Bold"),
     url("./fonts/AvenirNextLTProBold.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: normal;
 }

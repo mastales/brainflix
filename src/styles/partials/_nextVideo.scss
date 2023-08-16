@@ -1,13 +1,31 @@
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1279px) {
+        @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 1280px) and (max-width: 5000px) {
+        @content;
+    }
+  }
+
 .nextUp {
     display: flex;
     font-family: AvenirNext;
     align-items: center;
+    @include tablet(){
+        margin: 0 1.5rem 0 1.5rem;
+    }
 
     &__title{ 
         font-size: 1rem; //16px
         color: #AFAFAF;
         text-transform: uppercase;
         margin-left: 1rem; //16px
+        @include tablet(){
+            margin: 0 1.5rem 0 2.5rem;
+        }
     }
 
     &__img { 

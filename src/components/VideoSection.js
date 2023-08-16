@@ -4,13 +4,13 @@ import Video from "./Video";
 import VideoDescription from "./VideoDescripton";
 import VideoStats from "./VideoStats";
 
-function VideoSection () {
+function VideoSection ({ videoId }) {
     return (
         <>
-            <Video />
-            <VideoStats />
-            <VideoDescription />
-            <CommentSection />
+            <Video videoId={videoId}/>
+            <VideoStats videoId={videoId}/>
+            <VideoDescription videoId={videoId}/>
+            <CommentSection videoId={videoId}/>
         </>
     )
 };

@@ -1,8 +1,28 @@
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1279px) {
+        @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 1280px) and (max-width: 5000px) {
+        @content;
+    }
+  }
+
 .video {
 
     &__box {
         display: flex;
         margin: 0 1rem 0 1rem;
+
+        @include tablet () {
+            margin: 0 0 1rem 1rem;
+            
+            h1 {
+                margin: 1rem 0 0 1.5rem;
+            }
+        }
     }
 
     &__description {
@@ -10,10 +30,14 @@
         display: flex;
         margin: 0 1rem 0 1rem;
         line-height: 1.5rem; //24px
+
+        @include tablet() {
+            margin: 0 2.5rem 0 2.5rem;
+        }
     }
 
     &__img {
-        // height: ;
+        height: 37vh;
         width: 100vw;
     }
 }

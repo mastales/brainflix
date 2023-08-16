@@ -3,7 +3,7 @@ import userImg from '../components/images/comment_placeholder_img.png';
 import Divider from "./Divider";
 import data from '../data/video-details.json';
 
-function Comments() {
+function Comments({ videoId }) {
 
     const formatDate = (timestamp) => {
         const date = new Date(timestamp);
@@ -12,12 +12,16 @@ function Comments() {
         const year = date.getFullYear();
         return `${month}/${day}/${year}`;
     };
-    const video = data[0];
-    const comments = video.comments;
+
+    const videoData = data.filter ((currentItem) => {
+        return currentItem.id === videoId ? true : false
+    });
+    const comments = videoData[0]?.comments || [];
+
     return (
         <div>
             {comments.map((item) => (
-                <React.Fragment key={item.comment.id}>
+                <React.Fragment key={item.id}>
                     <div className="comments">
                         <div className="comments__left">
                             <img className="comments__userImg" src={userImg} />
