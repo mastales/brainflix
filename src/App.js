@@ -14,7 +14,8 @@ function App() {
   return (
     <>
       <HeaderNav />
-      <VideoSection videoId={videoId} setVideoId={setVideoId}/>
+      <VideoSection videoId={videoId}/>
+      <NextVideos videoId={videoId} setVideoId={setVideoId}/>
     </>
   );
 }

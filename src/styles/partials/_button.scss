@@ -49,6 +49,11 @@
         left: 8.75rem;
     }
     
+    @include desktop(){
+        margin: 0;
+        position: relative;
+        left: 8.75rem;
+    }
 
     &__upload {
         @include button {
@@ -57,6 +62,11 @@
 
         @include tablet () {
             width: 18vw;
+            justify-content: space-between;
+        }
+
+        @include desktop () {
+            width: 16vw;
             justify-content: space-between;
         }
     }
