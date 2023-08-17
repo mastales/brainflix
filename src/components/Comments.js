@@ -19,7 +19,7 @@ function Comments({ videoId }) {
     const comments = videoData[0]?.comments || [];
 
     return (
-        <div>
+        <div className="comments__all">
             {comments.map((item) => (
                 <React.Fragment key={item.id}>
                     <div className="comments">

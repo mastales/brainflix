@@ -12,7 +12,7 @@ function CommentNew({ videoId }) {
     })
 
     return (
-        <div>
+        <div className="commentNew__box">
             <div className="commentNew__count">
                 <h4>{videoData[0].comments.length} Comments</h4>
             </div>
@@ -31,7 +31,7 @@ function CommentNew({ videoId }) {
                     <Button name='Comment' img={comment}/>
                 </div>
             </div>
-            <Divider/>
+            <hr className="divider__comment"/>
         </div>
         
     )

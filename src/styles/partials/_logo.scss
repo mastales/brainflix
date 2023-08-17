@@ -16,10 +16,9 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    border: 1px solid orange;
 
     @include tablet() {
-
+      margin-left: 2.5rem
     }
   }
   
@@ -32,7 +31,6 @@
   }
 
   .Header__Nav {
-    border: 1px solid orange;
 
     @include tablet () {
       display: flex;

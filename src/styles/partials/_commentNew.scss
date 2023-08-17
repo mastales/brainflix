@@ -19,6 +19,10 @@
         margin: 0 2.5rem 0 2.5rem;
     }
 
+    @include desktop(){
+        margin: 0;
+    }
+
     &__title {
         font-family: AvenirNext-Bold;
         font-size: 0.875rem; //14px
@@ -56,6 +60,12 @@
             width: 50vw;
             padding: 0.7rem 0 0 1rem;
         }
+
+        @include desktop (){
+            height: 30px;
+            width: 35vw;
+            padding: 0.7rem 0 0 1rem;
+        }
     }
 
     &__img {
@@ -69,7 +79,15 @@
         width: 70vw;
         align-items: center;
         margin-left: 1rem; //8px
+        
         @include tablet {
+            width: 80vw;
+            justify-content: flex-end;
+            margin-right: 2.5rem;
+        }
+
+        @include desktop {
+            width: 15vw;
             justify-content: flex-end;
             margin-right: 2.5rem;
         }
@@ -79,10 +97,19 @@
     &__buttonHold {
         display: flex;
         width: 100%;
+        margin: 0;
+       
         @include tablet {
             justify-content: flex-end;
             position: relative;
             bottom: 4.1rem;
+        }
+
+        @include desktop {
+            justify-content: flex-end;
+            position: relative;
+            bottom: 4.1rem;
+            left: 10px;
         }
     }
     //Counter
@@ -96,6 +123,13 @@
 
         h4 {
             margin: 0.5rem 0 1rem 0;
+        }
+    }
+
+    &__box {
+
+        @include desktop(){
+            margin: 0 23rem 0 5rem;
         }
     }
 }

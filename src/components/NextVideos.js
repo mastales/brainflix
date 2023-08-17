@@ -11,10 +11,9 @@ function NextVideos({ videoId, setVideoId }){
         const clickedId = e.currentTarget.dataset.id;
         setVideoId(clickedId)
     }
-//Need to pass clickedId over to Hero video section
-//Need to leverage the state prop I have passed to this component
+
     return (
-        <>
+        <div className="nextVideo__divider">
             <div className="nextVideo">
             <h1 className='nextUp__title'>Next Video</h1>
                 {videoData.map((item) => (
@@ -32,7 +31,7 @@ function NextVideos({ videoId, setVideoId }){
                 ))}
                 
             </div>
-        </>
+        </div>
     )
 };
 

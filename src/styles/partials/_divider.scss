@@ -17,4 +17,46 @@
     @include tablet () {
         margin: 1rem 2.5rem;
     }
+
+    @include desktop () {
+        margin: 1rem 6rem;
+    }
+
+    &__videoStats { 
+        border-top: solid 1px #E1E1E1;
+        margin: 1rem 1rem 1rem 1rem;
+
+        @include tablet(){
+            display: none;
+        }
+
+        @include desktop(){
+            display: none;
+        }
+    }
+
+    &__comments {
+        border-top: solid 1px #E1E1E1;
+        margin: 1rem 1rem 1rem 1rem;
+
+        @include desktop(){
+            display: none;
+        }
+    }
+
+    &__nextVideos{
+        border-left: solid 5px #E1E1E1;
+        margin: 1rem 1rem 1rem 1rem;
+    }
+
+    &__comment { 
+        border-top: solid 1px #E1E1E1;
+        margin: 1rem 1rem 1rem 1rem;
+
+        @include tablet () {
+            margin: 0 2.5rem;
+        }
+
+
+    }
 }

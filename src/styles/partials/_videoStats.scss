@@ -16,6 +16,10 @@
     justify-content: flex-start;
     margin-left: 1rem;
 
+    @include desktop(){
+        margin-left: 6rem;
+    }
+
     &__left {
         margin-right: 4rem;
 

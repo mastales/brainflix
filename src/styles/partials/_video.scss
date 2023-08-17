@@ -23,6 +23,16 @@
                 margin: 1rem 0 0 1.5rem;
             }
         }
+
+        @include desktop () {
+            margin: 0 0 1rem 4.5rem;
+            
+            h1 {
+                margin: 1rem 0 0 1.5rem;
+            }
+        }
+
+
     }
 
     &__description {
@@ -34,10 +44,18 @@
         @include tablet() {
             margin: 0 2.5rem 0 2.5rem;
         }
+
+        @include desktop() {
+            margin: 0 23rem 0 6rem;
+        }
+    }
+
+    &__title {
+        margin: 1rem 0 0 0;
     }
 
     &__img {
-        height: 37vh;
+        height: auto;
         width: 100vw;
     }
 }

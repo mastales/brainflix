@@ -25,7 +25,7 @@ function VideoStats({ videoId }) {
     
     return (
         <> 
-            <Divider />
+            <hr className="divider__videoStats" />
             <div className="videoStats">
                 <div className="videoStats__left">
                     <h3>By {videoData[0].channel}</h3>
