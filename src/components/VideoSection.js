@@ -3,15 +3,20 @@ import CommentSection from "./CommentSection";
 import Video from "./Video";
 import VideoDescription from "./VideoDescripton";
 import VideoStats from "./VideoStats";
+import NextVideos from "./NextVideos";
 
-function VideoSection ({ videoId }) {
+function VideoSection ({ videoId, setVideoId}) {
     return (
-        <>
-            <Video videoId={videoId}/>
-            <VideoStats videoId={videoId}/>
-            <VideoDescription videoId={videoId}/>
-            <CommentSection videoId={videoId}/>
-        </>
+        <div className="content">
+            <div className="content__left">
+                <VideoStats videoId={videoId}/>
+                <VideoDescription videoId={videoId}/>
+                <CommentSection videoId={videoId}/>
+            </div>
+            <div className="content__right">
+                <NextVideos videoId={videoId} setVideoId={setVideoId}/>
+            </div> 
+        </div>
     )
 };
 

@@ -1,23 +1,33 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HeaderNav from './components/HeaderNav';
-import VideoSection from './components/VideoSection';
-import NextVideos from './components/NextVideos';
-import { useState } from 'react';
+import UploadPage from './components/UploadPage';
+import Home from './components/Home';
 
 
 
 function App() {
-  const [videoId, setVideoId] = useState(
-    "84e96018-4022-434e-80bf-000ce4cd12b8"
-    );
+  const API_URL = process.env.REACT_APP_SERVER_URL || "";
+
+  
   
   return (
     <>
-      <HeaderNav />
-      <VideoSection videoId={videoId}/>
-      <NextVideos videoId={videoId} setVideoId={setVideoId}/>
+      <BrowserRouter>
+        <div className='' >
+          <HeaderNav/>
+
+          <Routes>
+            <Route path={'/'} element={<Home api={API_URL}/>} />
+            <Route path={'/upload'} element={<UploadPage api={API_URL}/>} />
+            <Route path={'videos/:videoId'} element={<Home api={API_URL}/>} />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
   );
 }
 
 export default App;
+
+

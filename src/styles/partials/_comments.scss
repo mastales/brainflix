@@ -20,7 +20,7 @@
     }
 
     @include desktop(){
-        margin: 0 23rem 0 5rem;
+        margin: 0 0rem 0 5rem;
     }
 
     &__left {
@@ -41,12 +41,27 @@
         justify-content: space-between;
         align-items: center;
         margin: 1rem 0 0 0; //16px
+
+        @include desktop() {
+            width: 63vw;
+        }
         
     }
 
     &__bottom {
         width: 75vw;
         line-height: 1.5rem; //24px
+
+        @include desktop() {
+            width: auto;
+        }
+
+        p { 
+            @include desktop() {
+                display: flex;
+                width: 63vw;
+            }
+        }
     }
 
     &__userImg {
@@ -66,3 +81,4 @@
     }
 
 }
+

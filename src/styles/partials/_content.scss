@@ -1,0 +1,25 @@
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1279px) {
+        @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 1280px) and (max-width: 5000px) {
+        @content;
+    }
+  }
+
+  
+.content {
+    @include desktop() {
+        display: flex;
+    }
+
+    &__left {
+        @include desktop() {
+          width: 75vw;
+        //   margin-right: 6rem;
+        }
+    }
+}

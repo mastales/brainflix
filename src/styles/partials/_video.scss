@@ -11,6 +11,9 @@
   }
 
 .video {
+    @include desktop() {
+        margin: 0 0 0 6rem;
+    }
 
     &__box {
         display: flex;
@@ -46,7 +49,7 @@
         }
 
         @include desktop() {
-            margin: 0 23rem 0 6rem;
+            margin: 0 1rem 0 6rem;
         }
     }
 
