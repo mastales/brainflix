@@ -1,0 +1,43 @@
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1279px) {
+        @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 1280px) and (max-width: 5000px) {
+        @content;
+    }
+  }
+
+.uploadPage {
+
+    margin: 0rem 1rem; //16px
+
+    &__title {
+        
+    }
+
+    &__subtitle {
+        font-family: AvenirNext-Bold;
+        font-size: 0.875rem; //14px
+        color: #AFAFAF;
+        text-transform: uppercase;
+    }
+
+    &__form__input {
+        height: 2.5rem; //40px
+        width: 71vw;
+        margin-right: 1rem;
+        padding-left: 2rem; //32px
+        font-family: Avenir;
+        border-radius: 6px;
+        border: 2px solid #E1E1E1;
+        background-color: #FAFAFA;
+        font-size: 1rem;
+    }
+
+    &__button {
+        margin: 1.5rem 0 0 0;
+    }
+}

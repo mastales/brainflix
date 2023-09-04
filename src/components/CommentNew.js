@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import comment from '../components/images/add_comment.svg'; 
 import icon from '../components/images/Mohan-muruge.jpg';
 import Button from "./UploadButton";
-import Divider from "./Divider";
 import data from '../data/video-details.json';
 
 function CommentNew({ videoId }) {

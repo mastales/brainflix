@@ -24,7 +24,7 @@ function UploadPage () {
 
              <form className={"uploadPage__form"}>
                 <label>
-                    Title Your Video
+                    <h3 className="uploadPage__subtitle">Title Your Video</h3>
                     <input
                         className={"uploadPage__form__input"}
                         type={"text"}
@@ -33,9 +33,9 @@ function UploadPage () {
                     />
                 </label>
                 <label>
-                    Add A Video Description
+                <h3 className="uploadPage__subtitle">Add a Video Description</h3>
                     <input
-                        className={"form__input"}
+                        className={"uploadPage__form__input"}
                         type={"text"}
                         name={"Add A Video Description"}
                         placeholder={"Add a Description to your Video..."}
