@@ -5,18 +5,19 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 function Home({ api, apiKey }) {
-    const [videoListContent, setVideoListContent] = useState([]);
     const { videoIdentity } = useParams();
-    const [videoId, setVideoId] = useState(videoIdentity || videoListContent[0]?.id);
+    const [videoId, setVideoId] = useState(null);
 
     useEffect(() => {
         axios.get(`${api}/videos?api_key=${apiKey}`)
             .then(response => {
-                setVideoListContent(response.data);
+                if (!videoId) {
+                    setVideoId(response.data[0]?.id);
+                }
             })
             .catch(err => console.log(err));
-    }, [api, apiKey]);
-
+    }, [api, apiKey, videoId]);
+    
     return (
         <>
             <Video api={api} apiKey={apiKey} videoId={videoId} setVideoId={setVideoId} />

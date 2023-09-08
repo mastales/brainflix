@@ -1,16 +1,24 @@
-import {React, useState, useEffect} from "react";
+import { React } from "react";
+import { useNavigation } from "react-router-dom";
 import './Component/Component.scss';
 import '../../src/styles/partials/_button.scss'
-import HeaderNav from "./HeaderNav";
 import Divider from "./Divider";
 import publish from '../components/images/publish.svg';
 import Button from "./UploadButton";
 import '../../src/styles/partials/_uploadPage.scss';
 
 function UploadPage () {
+    const navigation = useNavigation();
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert('Video uploaded successfully!');
+        // Redirect to the home page
+        navigation.navigate('/');
+
+    }
     return (
-        <div className="uploadPage">
+        <div className="uploadPage" onSubmit={handleSubmit}>
              <Divider/>
              <div className="uploadPage__title">
                 <h1>Upload Video</h1>
@@ -43,6 +51,7 @@ function UploadPage () {
                 </label>
         </form>
         <Button 
+            type="submit"
             name='Publish' 
             img={publish}
             className={"uploadPage__button"} />
