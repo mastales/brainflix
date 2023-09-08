@@ -1,18 +1,22 @@
-import React, { useState } from "react";
-import './Component/Component.scss';
-import data from '../data/video-details.json';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-function VideoDescription({ videoId }) {
+function VideoDescription({ api, apiKey, videoId }) {
+    const [videoData, setVideoData] = useState({});
 
-    const videoData = data.filter((currentItem) => {
-        return currentItem.id === videoId ? true : false;
-    })
-    
+    useEffect(() => {
+        axios.get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+            .then(response => {
+                setVideoData(response.data);
+            })
+            .catch(err => console.log(err));
+    }, [api, apiKey, videoId]);
+
     return (
-        <div className="video__description" >
-            <p>{videoData[0].description}</p>
+        <div className="video__description">
+            <p>{videoData.description}</p>
         </div>
-    )
+    );
 }
 
 export default VideoDescription;

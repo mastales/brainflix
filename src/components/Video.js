@@ -1,24 +1,27 @@
-import React, { useState } from "react";
-import './Component/Component.scss';
-import data from '../data/video-details.json';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
+function Video({ api, apiKey, videoId }) {
+    const [videoData, setVideoData] = useState({});
 
-function Video({ videoId }) {
+    useEffect(() => {
+        axios.get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+            .then(response => {
+                setVideoData(response.data);
+            })
+            .catch(err => console.log(err));
+    }, [api, apiKey, videoId]);
 
-    const videoData = data.filter((currentItem) => {
-        return currentItem.id === videoId ? true : false;
-    })
-    
     return (
         <div>
             <div className="video">
-                <img className="video__img" src={videoData[0].image} />
+                <img className="video__img" src={videoData.image} alt="Video thumbnail" />
             </div>
             <div className="video__box">
-                <h1 className="video__title">{videoData[0].title}</h1>
+                <h1 className="video__title">{videoData.title}</h1>
             </div>
         </div>
-    )
+    );
 }
 
 export default Video;

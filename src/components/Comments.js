@@ -1,9 +1,18 @@
-import React from "react";
-import userImg from '../components/images/comment_placeholder_img.png';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Divider from "./Divider";
-import data from '../data/video-details.json';
+import userImg from "./images/comment_placeholder_img.png";
 
-function Comments({ videoId }) {
+function Comments({ api, apiKey, videoId }) {
+    const [comments, setComments] = useState([]);
+
+    useEffect(() => {
+        axios.get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+            .then(response => {
+                setComments(response.data.comments);
+            })
+            .catch(err => console.log(err));
+    }, [api, apiKey, videoId]);
 
     const formatDate = (timestamp) => {
         const date = new Date(timestamp);
@@ -13,18 +22,13 @@ function Comments({ videoId }) {
         return `${month}/${day}/${year}`;
     };
 
-    const videoData = data.filter ((currentItem) => {
-        return currentItem.id === videoId ? true : false
-    });
-    const comments = videoData[0]?.comments || [];
-
     return (
         <div className="comments__all">
             {comments.map((item) => (
                 <React.Fragment key={item.id}>
                     <div className="comments">
                         <div className="comments__left">
-                            <img className="comments__userImg" src={userImg} />
+                            <img className="comments__userImg" src={userImg} alt="User"/>
                         </div>
                         <div className="comments__right">
                             <div className="comments__middle">
@@ -42,5 +46,6 @@ function Comments({ videoId }) {
         </div>
     );
 }
+
 
 export default Comments;
