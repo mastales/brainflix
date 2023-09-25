@@ -4,16 +4,16 @@ import icon from "./images/Mohan-muruge.jpg";
 import Button from "./UploadButton";
 import comment from "./images/upload.svg";
 
-function CommentNew({ api, apiKey, videoId }) {
+function CommentNew({ api, videoId }) {
     const [commentsCount, setCommentsCount] = useState(0);
 
     useEffect(() => {
-        axios.get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+        axios.get(`${api}/videos/${videoId}/`)
             .then(response => {
                 setCommentsCount(response.data.comments.length);
             })
             .catch(err => console.log(err));
-    }, [api, apiKey, videoId]);
+    }, [api, videoId]);
 
     return (
         <div className="commentNew__box">

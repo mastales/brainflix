@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function NextVideos({ api, apiKey, videoId, setVideoId }) {
+function NextVideos({ api, videoId, setVideoId }) {
     const [videos, setVideos] = useState([]);
 
     useEffect(() => {
-        axios.get(`${api}/videos?api_key=${apiKey}`)
+        axios.get(`${api}/videos`)
             .then(response => {
                 setVideos(response.data);
             })
             .catch(err => console.log(err));
-    }, [api, apiKey]);
+    }, [api ]);
 
     const filteredVideos = videos.filter(item => item.id !== videoId);
 

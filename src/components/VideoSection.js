@@ -4,16 +4,16 @@ import VideoDescription from "./VideoDescripton";
 import VideoStats from "./VideoStats";
 import NextVideos from "./NextVideos";
 
-function VideoSection ({ videoId, setVideoId, api, apiKey, videoIdentity, videoListContent}) {
+function VideoSection ({ videoId, setVideoId, api }) {
     return (
         <div className="content">
             <div className="content__left">
-                <VideoStats api={api} apiKey={apiKey} videoId={videoId}/>
-                <VideoDescription api={api} apiKey={apiKey} videoId={videoId}/>
-                <CommentSection api={api} apiKey={apiKey} videoId={videoId}/>
+                <VideoStats api={api} videoId={videoId}/>
+                <VideoDescription api={api} videoId={videoId}/>
+                <CommentSection api={api} videoId={videoId}/>
             </div>
             <div className="content__right">
-                <NextVideos api={api} apiKey={apiKey} videoId={videoId} setVideoId={setVideoId}/>
+                <NextVideos api={api} videoId={videoId} setVideoId={setVideoId}/>
             </div> 
         </div>
     )

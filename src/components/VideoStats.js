@@ -4,16 +4,16 @@ import views from "./images/views.svg";
 import likes from "./images/likes.svg";
 import Divider from "./Divider";
 
-function VideoStats({ api, apiKey, videoId }) {
+function VideoStats({ api, videoId }) {
     const [videoData, setVideoData] = useState({});
 
     useEffect(() => {
-        axios.get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+        axios.get(`${api}/videos/${videoId}/`)
             .then(response => {
                 setVideoData(response.data);
             })
             .catch(err => console.log(err));
-    }, [api, apiKey, videoId]);
+    }, [api, videoId]);
 
     const timestampDate = (dateMs) => {
         let date = new Date(dateMs);

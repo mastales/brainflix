@@ -2,11 +2,11 @@ import React from "react";
 import CommentNew from "./CommentNew";
 import Comments from "./Comments";
 
-function CommentSection ({ videoId, api, apiKey }) {
+function CommentSection ({ videoId, api }) {
     return (
         <>
-            <CommentNew api={api} apiKey={apiKey} videoId={videoId}/>
-            <Comments api={api} apiKey={apiKey} videoId={videoId}/>
+            <CommentNew api={api} videoId={videoId}/>
+            <Comments api={api} videoId={videoId}/>
         </>
     )
 };

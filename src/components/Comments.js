@@ -3,16 +3,16 @@ import axios from "axios";
 import Divider from "./Divider";
 import userImg from "./images/comment_placeholder_img.png";
 
-function Comments({ api, apiKey, videoId }) {
+function Comments({ api, videoId }) {
     const [comments, setComments] = useState([]);
 
     useEffect(() => {
-        axios.get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+        axios.get(`${api}/videos/${videoId}/`)
             .then(response => {
                 setComments(response.data.comments);
             })
             .catch(err => console.log(err));
-    }, [api, apiKey, videoId]);
+    }, [api, videoId]);
 
     const formatDate = (timestamp) => {
         const date = new Date(timestamp);

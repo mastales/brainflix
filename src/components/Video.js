@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function Video({ api, apiKey, videoId }) {
+function Video({ api, videoId }) {
     const [videoData, setVideoData] = useState({});
-
+    console.log('API_URL:', api); // should log http://localhost:8080 if correctly set in .env
     useEffect(() => {
-        axios.get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+        axios.get(`${api}/videos/${videoId}`)
             .then(response => {
                 setVideoData(response.data);
             })
             .catch(err => console.log(err));
-    }, [api, apiKey, videoId]);
+    }, [api, videoId]);
 
     return (
         <div>

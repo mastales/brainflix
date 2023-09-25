@@ -1,27 +1,25 @@
 import React, { useEffect, useState } from "react";
 import Video from "./Video";
 import VideoSection from "./VideoSection";
-import { useParams } from "react-router-dom";
 import axios from "axios";
 
-function Home({ api, apiKey }) {
-    const { videoIdentity } = useParams();
+function Home({ api }) {
     const [videoId, setVideoId] = useState(null);
 
     useEffect(() => {
-        axios.get(`${api}/videos?api_key=${apiKey}`)
+        axios.get(`${api}/videos/`)
             .then(response => {
                 if (!videoId) {
                     setVideoId(response.data[0]?.id);
                 }
             })
             .catch(err => console.log(err));
-    }, [api, apiKey, videoId]);
-    
+    }, [api, videoId]);
+    console.log('API_URL:', api); // should log http://localhost:8080 if correctly set in .env
     return (
         <>
-            <Video api={api} apiKey={apiKey} videoId={videoId} setVideoId={setVideoId} />
-            <VideoSection api={api} apiKey={apiKey} videoId={videoId} setVideoId={setVideoId} />
+            <Video api={api} videoId={videoId} setVideoId={setVideoId} />
+            <VideoSection api={api} videoId={videoId} setVideoId={setVideoId} />
         </>
     );
 }
